@@ -9,6 +9,9 @@ var createTaskList = function(div, handler) {
     var getTasks = function(storageString) {
         return (storageString === "") ? [] : storageString.split("|");
     };
+    var setTasks = function(arr) {
+        return (Array.isArray(arr)) ? arr.join("|") : arr;
+    };
     // public methods that have access to private variables and functions
     return {
         load: function() {

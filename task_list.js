@@ -40,13 +40,13 @@ var boldExclamationPoint = function bold (node) {
 };
 
 window.onload = function() {
-    $("add_task").onclick = addTaskList;
+    $("add_task").onclick = addToTaskList;
     $("clear_tasks").onclick = clearTaskList;
     $("bold").onclick = function() {
         boldExclamationPoint(document);
     };
 
-    tasklist = creatTaskList($("tasks"), deleteFromTaskList);
+    tasklist = createTaskList($("tasks"), deleteFromTaskList);
     tasklist.load().display();
     $("task").focus();
 }
